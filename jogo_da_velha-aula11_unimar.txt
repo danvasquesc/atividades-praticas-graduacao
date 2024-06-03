@@ -1,0 +1,206 @@
+ALGORITMO "JOGO DA VELHA"
+VAR
+MATRIZ : VETOR [1..3,1..3] DE CARACTERE
+I, J, JOGADOR, RODADAS : INTEIRO
+INICIO
+      JOGADOR <- 1
+      RODADAS <- 0
+
+// Inicialização da matriz para que todas as posições estejam em branco.
+
+   PARA I DE 1 ATE 3 PASSO 1 FACA
+        PARA J DE 1 ATE 3 PASSO 1 FACA
+        MATRIZ [I,J] <- " "
+
+        FIMPARA
+   FIMPARA
+
+// Laço de repetição que para só se alguém ganha ou acabam os espaços.
+
+ENQUANTO (RODADAS <=  9) FACA
+
+   // Desenha o jogo da velha atualizado.
+
+        ESCREVAL (" *** JOGO DA VELHA ***")
+
+        PARA I DE 1 ATE 3 PASSO 1 FACA
+
+             ESCREVAL (MATRIZ[I,1], " | ", MATRIZ[I,2], " | ", MATRIZ[I,3])
+
+             SE (I < 3) ENTAO
+
+                ESCREVAL ("--+---+--")
+
+             FIMSE
+
+        FIMPARA
+
+   // Solicita as coordenadas dos jogador a cada rodada.
+
+         ESCREVA ("DIGITE A LINHA DESEJADA: ")
+
+         LEIA (I)
+
+         ESCREVA ("DIGITE A COLUNA DESEJADA: ")
+
+         LEIA (J)
+
+       SE (JOGADOR = 1)  ENTAO
+
+             MATRIZ [I,J] <- "X"
+
+           JOGADOR <- 2
+
+       SENAO
+
+              MATRIZ [I,J] <- "O"
+
+              JOGADOR <- 1
+
+       FIMSE
+
+       RODADAS <- RODADAS + 1
+
+   // Inicia a avaliação de vitória de cada jogador a cada rodada.
+
+       SE ((MATRIZ[1,1] = "O") E (MATRIZ[1,2] = "O") E (MATRIZ[1,3] = "O")) ENTAO
+
+          ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[2,1] = "O") E (MATRIZ[2,2] = "O") E (MATRIZ[2,3] = "O")) ENTAO
+
+          ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[3,1] = "O") E (MATRIZ[3,2] = "O") E (MATRIZ[3,3] = "O")) ENTAO
+
+          ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,1] = "O") E (MATRIZ[2,1] = "O") E (MATRIZ[3,1] = "O")) ENTAO
+
+               ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,2] = "O") E (MATRIZ[2,2] = "O") E (MATRIZ[3,2] = "O")) ENTAO
+
+               ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,3] = "O") E (MATRIZ[2,3] = "O") E (MATRIZ[3,3] = "O")) ENTAO
+
+               ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,1] = "O") E (MATRIZ[2,2] = "O") E (MATRIZ[3,3] = "O")) ENTAO
+
+               ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,3]= "O") E (MATRIZ[2,2] = "O") E (MATRIZ[3,1] = "O"))  ENTAO
+
+            ESCREVAL ("JOGADOR 2, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+
+
+       SE ((MATRIZ[1,1] = "X") E (MATRIZ[1,2] = "X") E (MATRIZ[1,3] = "X")) ENTAO
+
+          ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[2,1] = "X") E (MATRIZ[2,2] = "X") E (MATRIZ[2,3] = "X")) ENTAO
+
+          ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[3,1] = "X") E (MATRIZ[3,2] = "X") E (MATRIZ[3,3] = "X")) ENTAO
+
+          ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,1] = "X") E (MATRIZ[2,1] = "X") E (MATRIZ[3,1] = "X")) ENTAO
+
+               ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,2] = "X") E (MATRIZ[2,2] = "X") E (MATRIZ[3,2] = "X")) ENTAO
+
+               ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,3] = "X") E (MATRIZ[2,3] = "X") E (MATRIZ[3,3] = "X")) ENTAO
+
+               ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,1] = "X") E (MATRIZ[2,2] = "X") E (MATRIZ[3,3] = "X")) ENTAO
+
+               ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+       SE ((MATRIZ[1,3] = "X") E (MATRIZ[2,2] = "X") E (MATRIZ[3,1] = "X"))  ENTAO
+
+            ESCREVAL ("JOGADOR 1, VOCÊ VENCEU!!!")
+
+          RODADAS <- 10
+
+       FIMSE
+
+// Esta opção é para o caso de ser preenchida a matriz sem vitorioso.
+
+       SE (RODADAS = 9) ENTAO
+
+            ESCREVAL ("PARTIDA EMPATADA!!!")
+
+       FIMSE
+
+   FIMENQUANTO
+
+FIMALGORITMO
