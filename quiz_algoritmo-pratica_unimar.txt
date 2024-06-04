@@ -1,5 +1,6 @@
 algoritmo "Quiz_Algoritmo"
 // Autor : Dan Vasques Carvalho (2024)
+
 var
    resposta: caractere
    pFinal, p1, p2, p3, p4, p5: inteiro
@@ -31,14 +32,14 @@ inicio
               escreval("")
               leia(resposta)
 
-              se (resposta = "A") ou (resposta = "a") entao
+                 se (resposta = "A") ou (resposta = "a") entao
               escreval("Resposta certa! +5 pontos.")
               p1 <- 5
 
                     senao
                          escreval("Resposta errada! 0 pontos.")
                          p1 <- 0
-              Fimse
+                 Fimse
        Fimse
 
        pFinal <- p1
@@ -61,14 +62,14 @@ inicio
               escreval("")
               leia(resposta)
 
-              se (resposta = "C") ou (resposta = "c") entao
+                 se (resposta = "C") ou (resposta = "c") entao
               escreval("Resposta certa! +5 pontos.")
               p2 <- 5
 
                     senao
                          escreval("Resposta errada! 0 pontos.")
                          p2 <- 0
-              Fimse
+                 Fimse
        Fimse
 
        pFinal <- (pFinal + p2)
@@ -91,14 +92,14 @@ inicio
               escreval("")
               leia(resposta)
 
-              se (resposta = "B") ou (resposta = "b") entao
+                 se (resposta = "B") ou (resposta = "b") entao
               escreval("Resposta certa! +5 pontos.")
               p3 <- 5
 
                     senao
                          escreval("Resposta errada! 0 pontos.")
                          p3 <- 0
-              Fimse
+                 Fimse
        Fimse
 
        pFinal <- (pFinal + p3)
@@ -121,14 +122,14 @@ inicio
               escreval("")
               leia(resposta)
 
-              se (resposta = "A") ou (resposta = "a") entao
+                 se (resposta = "A") ou (resposta = "a") entao
               escreval("Resposta certa! +5 pontos.")
               p4 <- 5
 
                     senao
                          escreval("Resposta errada! 0 pontos.")
                          p4 <- 0
-              Fimse
+                 Fimse
        Fimse
 
        pFinal <- (pFinal + p4)
@@ -151,14 +152,14 @@ inicio
               escreval("")
               leia(resposta)
 
-              se (resposta = "C") ou (resposta = "c") entao
+                 se (resposta = "C") ou (resposta = "c") entao
               escreval("Resposta certa! +5 pontos.")
               p5 <- 5
 
                     senao
                          escreval("Resposta errada! 0 pontos.")
                          p5 <- 0
-              Fimse
+                 Fimse
        Fimse
 
        pFinal <- (pFinal + p5)
