@@ -1,4 +1,4 @@
-## Algoritmo apresentado na disciplina de "Algoritmo e Lógica de Programação" do curso de ADS da Unimar, na aula 11.
+// Algoritmo apresentado na disciplina de "Algoritmo e Lógica de Programação" do curso de ADS da Unimar, na aula 11.
 
 ALGORITMO "JOGO DA VELHA"
 VAR
