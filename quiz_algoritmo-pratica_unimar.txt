@@ -5,7 +5,7 @@ var
    resposta: caractere
    pFinal, p1, p2, p3, p4, p5: inteiro
 inicio
-      pFinal <- 0
+      pFinal <- 0       // inicialização das váriaveis em 0 pois ainda não possuem valores.
       p1 <- 0
       p2 <- 0
       p3 <- 0
@@ -23,24 +23,24 @@ inicio
       escreval("")
       leia(resposta)
 
-      se (resposta = "A") ou (resposta = "a") entao
-      escreval("Resposta certa! +10 pontos.")
-      p1 <- 10
+      se (resposta = "A") ou (resposta = "a") entao       // condicionais para atribuir o valor à variavel, de acordo com a resposta do usuário.
+         escreval("Resposta certa! +10 pontos.")
+         p1 <- 10
 
-         senao
-              escreval("Resposta errada! Tente novamente: ")
-              escreval("")
-              leia(resposta)
+            senao                                            // se condição não for superada acima, realiza-se então o senao.
+               escreval("Resposta errada! Tente novamente: ")
+               escreval("")
+               leia(resposta)                               // coloca-se uma nova tentativa até condição ser suprida.
 
-                 se (resposta = "A") ou (resposta = "a") entao
-              escreval("Resposta certa! +5 pontos.")
-              p1 <- 5
+                  se (resposta = "A") ou (resposta = "a") entao
+                     escreval("Resposta certa! +5 pontos.")
+                     p1 <- 5
 
-                    senao
-                         escreval("Resposta errada! 0 pontos.")
-                         p1 <- 0
-                 Fimse
-       Fimse
+                        senao
+                           escreval("Resposta errada! 0 pontos.")
+                           p1 <- 0
+                  fimse
+       fimse
 
        pFinal <- p1
        escreval("")
