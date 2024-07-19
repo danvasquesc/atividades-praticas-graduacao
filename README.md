@@ -1,4 +1,4 @@
-## 👾 Atividades da minha graduação.  <br>
+## 👾 Atividades da graduação em Análise e Desenvolvimento de Sistemas  <br>
 
 ### 📌 Proposta do repositório: 
 
