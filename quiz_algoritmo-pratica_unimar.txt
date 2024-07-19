@@ -1,106 +1,110 @@
 algoritmo "Quiz_Algoritmo"
-// Autor : Dan Vasques Carvalho (2024)
+
+// Função : Elaboração de um algoritmo para o desenvolvimento de um quiz de perguntas e respostas com pontuação e avaliação de desempenho.
+// Autor :  Dan Vasques
+// Data : 13/05/2024
 
 var
    resposta: caractere
    pFinal, p1, p2, p3, p4, p5: inteiro
-inicio
-      pFinal <- 0       // inicialização das váriaveis em 0 pois ainda não possuem valores.
-      p1 <- 0
-      p2 <- 0
-      p3 <- 0
-      p4 <- 0
-      p5 <- 0
 
-      escreval("Olá! A partir de agora você participará de um QUIZ.")
-      escreval("")
+inicio
+   pFinal <- 0       // inicialização das váriaveis em 0 pois ainda não possuem valores.
+   p1 <- 0
+   p2 <- 0
+   p3 <- 0
+   p4 <- 0
+   p5 <- 0
+
+   escreval("Olá! A partir de agora você participará de um QUIZ.")
+   escreval("")
 
 // Pergunta 01
-      escreval("Pergunta 01: O computador é:")
-      escreval("a)um dispositivo eletrônico capaz de processar dados.")
-      escreval("b)uma calculadora.")
-      escreval("c)um dispositivo que imprime documentos.")
-      escreval("")
-      leia(resposta)
+   escreval("Pergunta 01: O computador é:")
+   escreval("a)um dispositivo eletrônico capaz de processar dados.")
+   escreval("b)uma calculadora.")
+   escreval("c)um dispositivo que imprime documentos.")
+   escreval("")
+   leia(resposta)
 
-      se (resposta = "A") ou (resposta = "a") entao       // condicionais para atribuir o valor à variavel, de acordo com a resposta do usuário.
-         escreval("Resposta certa! +10 pontos.")
-         p1 <- 10
+   se (resposta = "A") ou (resposta = "a") entao       // condicionais para atribuir o valor à variavel, de acordo com a resposta do usuário.
+      escreval("Resposta certa! +10 pontos.")
+      p1 <- 10
 
-            senao                                            // se condição não for superada acima, realiza-se então o senao.
-               escreval("Resposta errada! Tente novamente: ")
-               escreval("")
-               leia(resposta)                               // coloca-se uma nova tentativa até condição ser suprida.
+         senao                                            // se condição não for superada acima, realiza-se então o senao.
+            escreval("Resposta errada! Tente novamente: ")
+            escreval("")
+            leia(resposta)                               // coloca-se uma nova tentativa até condição ser suprida.
 
-                  se (resposta = "A") ou (resposta = "a") entao
-                     escreval("Resposta certa! +5 pontos.")
-                     p1 <- 5
+               se (resposta = "A") ou (resposta = "a") entao
+                  escreval("Resposta certa! +5 pontos.")
+                  p1 <- 5
 
-                        senao
-                           escreval("Resposta errada! 0 pontos.")
-                           p1 <- 0
-                  fimse
-       fimse
+                     senao
+                        escreval("Resposta errada! 0 pontos.")
+                        p1 <- 0
+               fimse
+   fimse
 
-       pFinal <- p1
-       escreval("")
+   pFinal <- p1
+   escreval("")
 
 // Pergunta 02
-      escreval("Pergunta 02: O que é um loop em programação?")
-      escreval("a)uma ferramenta de desenho.")
-      escreval("b)uma linguagem de programação.")
-      escreval("c)uma estrutura de repetição.")
-      escreval("")
-      leia(resposta)
+   escreval("Pergunta 02: O que é um loop em programação?")
+   escreval("a)uma ferramenta de desenho.")
+   escreval("b)uma linguagem de programação.")
+   escreval("c)uma estrutura de repetição.")
+   escreval("")
+   leia(resposta)
 
-      se (resposta = "C") ou (resposta = "c") entao
+   se (resposta = "C") ou (resposta = "c") entao
       escreval("Resposta certa! +10 pontos.")
       p2 <- 10
 
          senao
-              escreval("Resposta errada! Tente novamente: ")
-              escreval("")
-              leia(resposta)
+            escreval("Resposta errada! Tente novamente: ")
+            escreval("")
+            leia(resposta)
 
-                 se (resposta = "C") ou (resposta = "c") entao
-              escreval("Resposta certa! +5 pontos.")
-              p2 <- 5
+               se (resposta = "C") ou (resposta = "c") entao
+                  escreval("Resposta certa! +5 pontos.")
+                  p2 <- 5
 
-                    senao
-                         escreval("Resposta errada! 0 pontos.")
-                         p2 <- 0
-                 Fimse
-       Fimse
+                     senao
+                        escreval("Resposta errada! 0 pontos.")
+                        p2 <- 0
+               Fimse
+   Fimse
 
-       pFinal <- (pFinal + p2)
-       escreval("")
+   pFinal <- (pFinal + p2)    // variavel recebe o valor da pergunta 01, que está na variavel pFinal mais o valor da variavel p2
+   escreval("")
 
 // Pergunta 03
-      escreval("Pergunta 03: O que são variáveis?")
-      escreval("a)repetir uma ação várias vezes.")
-      escreval("b)locais para armazenar e manipular dados.")
-      escreval("c)uma função matemática complexa.")
-      escreval("")
-      leia(resposta)
+   escreval("Pergunta 03: O que são variáveis?")
+   escreval("a)repetir uma ação várias vezes.")
+   escreval("b)locais para armazenar e manipular dados.")
+   escreval("c)uma função matemática complexa.")
+   escreval("")
+   leia(resposta)
 
-      se (resposta = "B") ou (resposta = "b") entao
+   se (resposta = "B") ou (resposta = "b") entao
       escreval("Resposta certa! +10 pontos.")
       p3 <- 10
 
          senao
-              escreval("Resposta errada! Tente novamente: ")
-              escreval("")
-              leia(resposta)
+            escreval("Resposta errada! Tente novamente: ")
+            escreval("")
+            leia(resposta)
 
-                 se (resposta = "B") ou (resposta = "b") entao
-              escreval("Resposta certa! +5 pontos.")
-              p3 <- 5
+               se (resposta = "B") ou (resposta = "b") entao
+                  escreval("Resposta certa! +5 pontos.")
+                  p3 <- 5
 
-                    senao
-                         escreval("Resposta errada! 0 pontos.")
-                         p3 <- 0
-                 Fimse
-       Fimse
+                     senao
+                        escreval("Resposta errada! 0 pontos.")
+                        p3 <- 0
+               Fimse
+   Fimse
 
        pFinal <- (pFinal + p3)
        escreval("")
