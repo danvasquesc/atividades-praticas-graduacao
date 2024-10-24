@@ -8,7 +8,7 @@ A proposta deste repositório é armazenar e documentar todas as atividades, tra
 
 ### 📌 Editor utilizado:
 
-![Visualg](https://img.shields.io/badge/Visualg_2.5-d3d3d3?style=for-the-badge&logo=front%20end%20editor&logoColor=white)
+![Visualg](https://img.shields.io/badge/Visualg-007C7C?style=for-the-badge&logo=Visualg&logoColor=white)
 
 <br>
 
