@@ -10,6 +10,7 @@ A proposta deste repositório é armazenar e documentar todas as atividades, tra
 ## 📌 Ferramenta utilizada
 
 ![Visualg](https://img.shields.io/badge/Visualg-007C7C?style=for-the-badge&logo=Visualg&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 <br>
 
